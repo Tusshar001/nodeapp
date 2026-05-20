@@ -20,7 +20,7 @@ jobs:
           script: |
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load nvm if used
-            cd ~/DEPLOY/NODEAPP
+            cd /home/ubuntu/deploy/nodeapp
             git pull origin main
             npm install
             pm2 restart hello-world-app || pm2 start index.js --name "hello-world-app"
